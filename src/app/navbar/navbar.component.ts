@@ -11,4 +11,21 @@ import { NgIf } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80, // Adjust offset to avoid overlap with the fixed navbar
+        behavior: 'smooth' // Enables smooth scrolling
+      });
+    }
+  }
+
+  downloadResume() {
+    const resumeUrl = 'assets/hrishikeshresume.pdf'; // Correct path
+    window.open(resumeUrl, '_blank');
+  }
+  
+}

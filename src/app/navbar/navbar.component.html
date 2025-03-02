@@ -1,14 +1,15 @@
 <mat-toolbar style="background-color: rgba(0, 0, 0, 0.7); display: flex; align-items: center; padding: 10px 20px; position: fixed; width: 100%; top: 0; z-index: 1000;">
-    <span style="color: white; font-size: 20px; font-weight: bold;">Hrishikesh Portfolio</span>
-  
-    <div style="flex: 1;"></div> <!-- Pushes the menu to the right -->
-  
-    <div style="display: flex; gap: 20px;">
-      <button mat-button style="color: white;">Experience</button>
-      <button mat-button style="color: white;">Education</button>
-      <button mat-button style="color: white;">Projects</button>
-      <button mat-button style="color: white;">Contact Us</button>
-      <button mat-button style="color: white;">Download Resume</button>
-    </div>
-  </mat-toolbar>
-  
+  <span style="color: white; font-size: 20px; font-weight: bold;">Hrishikesh Portfolio</span>
+
+  <div style="flex: 1;"></div> <!-- Pushes the menu to the right -->
+
+  <div style="display: flex; gap: 20px;">
+      <button mat-button style="color: white;" (click)="scrollToSection('experience-section')">Experience</button>
+      <button mat-button style="color: white;" (click)="scrollToSection('education-section')">Education</button>
+      <button mat-button style="color: white;" (click)="scrollToSection('projects-section')">Projects</button>
+      <button mat-button style="color: white;" (click)="scrollToSection('contact-section')">Contact Us</button>
+      <a href="hrishikeshresume.pdf" download="Hrishikesh_Resume.pdf">
+        <button mat-button style="color: white">Download Resume</button>
+      </a>
+        </div>
+</mat-toolbar>
