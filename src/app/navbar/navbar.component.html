@@ -1,15 +1,79 @@
 <mat-toolbar style="background-color: rgba(0, 0, 0, 0.7); display: flex; align-items: center; padding: 10px 20px; position: fixed; width: 100%; top: 0; z-index: 1000;">
-  <span style="color: white; font-size: 20px; font-weight: bold;">Hrishikesh Portfolio</span>
+  <span style="color: white; font-size: 20px; font-weight: bold;" (click)="scrollToSection('intro-section')">Hrishikesh Portfolio</span>
 
   <div style="flex: 1;"></div> <!-- Pushes the menu to the right -->
+  intro-section
+  <!-- Toolbar buttons for larger screens -->
+  <div class="toolbar-buttons">
+    <button mat-button style="color: white;" (click)="scrollToSection('experience-section')">Experience</button>
+    <button mat-button style="color: white;" (click)="scrollToSection('education-section')">Education</button>
+    <button mat-button style="color: white;" (click)="scrollToSection('projects-section')">Projects</button>
+    <button mat-button style="color: white;" (click)="scrollToSection('contact-section')">Contact Us</button>
+    <a href="hrishikeshresume.pdf" download="Hrishikesh_Resume.pdf">
+      <button mat-button style="color: white">Download Resume</button>
+    </a>
+  </div>
 
-  <div style="display: flex; gap: 20px;">
-      <button mat-button style="color: white;" (click)="scrollToSection('experience-section')">Experience</button>
-      <button mat-button style="color: white;" (click)="scrollToSection('education-section')">Education</button>
-      <button mat-button style="color: white;" (click)="scrollToSection('projects-section')">Projects</button>
-      <button mat-button style="color: white;" (click)="scrollToSection('contact-section')">Contact Us</button>
-      <a href="hrishikeshresume.pdf" download="Hrishikesh_Resume.pdf">
-        <button mat-button style="color: white">Download Resume</button>
-      </a>
-        </div>
+  <!-- Hamburger Menu Icon (Visible only on mobile view) -->
+  <button mat-icon-button (click)="toggleMenu()" class="hamburger-icon">
+    <mat-icon style="color: white;">menu</mat-icon>
+  </button>
 </mat-toolbar>
+
+<!-- Mobile Menu (Initially hidden, shown when toggled) -->
+<div class="mobile-menu" *ngIf="isMenuOpen">
+  <button ></button>
+  <button mat-button style="color: white;" (click)="scrollToSection('experience-section')">Experience</button>
+  <button mat-button style="color: white;" (click)="scrollToSection('education-section')">Education</button>
+  <button mat-button style="color: white;" (click)="scrollToSection('projects-section')">Projects</button>
+  <button mat-button style="color: white;" (click)="scrollToSection('contact-section')">Contact Us</button>
+  <a href="hrishikeshresume.pdf" download="Hrishikesh_Resume.pdf">
+    <button mat-button style="color: white">Download Resume</button>
+  </a>
+</div>
+
+<!-- Responsive CSS -->
+<style>
+  /* Hide the toolbar buttons on mobile view */
+  @media screen and (max-width: 768px) {
+    .toolbar-buttons {
+      display: none;
+    }
+
+    /* Show the hamburger menu icon only on mobile */
+    .hamburger-icon {
+      display: block;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 999;
+      opacity: 1; /* Ensure the menu is fully visible */
+      visibility: visible; /* Prevent any hidden styles */
+      transition: opacity 0.3s ease-in-out; /* Optional: adds a fade-in effect */
+    }
+
+    .mobile-menu button {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+      opacity: 1; /* Ensure buttons are visible */
+      transition: opacity 0.3s ease-in-out; /* Optional: adds fade-in effect for buttons */
+    }
+  }
+
+  /* Hide the hamburger menu icon on larger screens */
+  @media screen and (min-width: 769px) {
+    .hamburger-icon {
+      display: none;
+    }
+  }
+</style>
