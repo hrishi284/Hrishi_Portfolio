@@ -73,4 +73,14 @@ export class AppComponent {
     const rect = element.getBoundingClientRect();
     return rect.top <= window.innerHeight && rect.bottom >= 0;
   }
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80, // Adjust offset to avoid overlap with the fixed navbar
+        behavior: 'smooth' // Enables smooth scrolling
+      });
+    }
+  }
 }

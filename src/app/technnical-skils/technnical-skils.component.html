@@ -1,44 +1,92 @@
-<div id="technical-skills-section" style="
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  background: white; /* Start with white background */
-  color: white;
-  text-align: center;
-  transition: opacity 1s ease-in-out, background-color 1s ease-in-out; /* Transition for opacity and background-color */
-">
-
-  <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Technical skills</h2>
-
-  <div style="max-width: 800px; text-align: left;">
-    <div style="margin-bottom: 30px;">
-      <h3 style="font-size: 1.5rem; color: #ffcc00;"> Primary Skills :</h3>
-      <ul>
-        <li>Analysis, Designing , Development , Implementation</li>
-      </ul>
-      <h3 style="font-size: 1.5rem; color: #ffcc00;">Languages & Framework:</h3>
-      <ul>
-        <li>C# , ASP.Net Core, ASP .Net MVC, ADO.Net 
-            ,Web API ,Java</li>
-      </ul>
-      <h3 style="font-size: 1.5rem; color: #ffcc00;">Web Technologies :</h3>
-      <ul>
-        <li>HTML , CSS , Angular 14 ,ReactJS</li>
-      </ul>
-      <h3 style="font-size: 1.5rem; color: #ffcc00;">Database :</h3>
-      <ul>
-        <li>SQL , MongoDB</li>
-      </ul>
-      <h3 style="font-size: 1.5rem; color: #ffcc00;">IDE’s :</h3>
-      <ul>
-        <li>Visual Studio , Visual Studio Code</li>
-      </ul>
-      <h3 style="font-size: 1.5rem; color: #ffcc00;">Tools :</h3>
-      <ul>
-        <li>SQL Server management studio, Postman , Git etc.</li>
-      </ul>
-</div>
-</div>
-</div>
+<div id="technical-skills-section" class="technical-skills-section">
+    <h2 style="color: white;">Technical Skills</h2>
+    <div class="technical-skills-content">
+      <div>
+        <h3>Primary Skills :</h3>
+        <ul>
+          <li>Analysis, Designing, Development, Implementation</li>
+        </ul>
+        <h3>Languages & Framework:</h3>
+        <ul>
+          <li>C#, ASP.Net Core, ASP.Net MVC, ADO.Net, Web API, Java</li>
+        </ul>
+        <h3>Web Technologies :</h3>
+        <ul>
+          <li>HTML, CSS, Angular 14, ReactJS</li>
+        </ul>
+        <h3>Database :</h3>
+        <ul>
+          <li>SQL, MongoDB</li>
+        </ul>
+        <h3>IDE’s :</h3>
+        <ul>
+          <li>Visual Studio, Visual Studio Code</li>
+        </ul>
+        <h3>Tools :</h3>
+        <ul>
+          <li>SQL Server Management Studio, Postman, Git, etc.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .technical-skills-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      background: white;
+      color: black;
+      text-align: center;
+      transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
+    }
+  
+    .technical-skills-content {
+      max-width: 800px;
+      text-align: left;
+    }
+  
+    .technical-skills-content h3 {
+      font-size: 1.5rem;
+      color: #ffcc00;
+    }
+    .technical-skills-content ul li {
+      color: white;
+    }
+  
+    @media (max-width: 1024px) {
+      .technical-skills-section {
+        padding: 40px 15px;
+      }
+      .technical-skills-content {
+        max-width: 700px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .technical-skills-section {
+        padding: 30px 10px;
+      }
+      .technical-skills-content {
+        max-width: 600px;
+      }
+      .technical-skills-content h3 {
+        font-size: 1.3rem;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .technical-skills-section {
+        padding: 20px 5px;
+      }
+      .technical-skills-content {
+        max-width: 100%;
+      }
+      .technical-skills-content h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  

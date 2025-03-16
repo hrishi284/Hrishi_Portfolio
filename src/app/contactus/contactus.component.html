@@ -46,7 +46,7 @@
     </div>
 
     <!-- LinkedIn -->
-    <div style="display: flex; align-items: center; gap: 15px;">
+    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
       <span style="font-size: 1.5rem; color: #ffcc00;">🔗</span>
       <p style="font-size: 1.2rem; margin: 0;">
         <strong>LinkedIn:</strong> 
@@ -56,6 +56,57 @@
       </p>
     </div>
 
+    <!-- WhatsApp -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <span style="font-size: 1.5rem; color: #ffcc00;">💬</span>
+      <p style="font-size: 1.2rem; margin: 0;">
+        <strong>WhatsApp:</strong> 
+        <a href="https://wa.me/+919763545154?text=Hello%20Hrushikesh!" target="_blank" style="color: #ffcc00; text-decoration: none; font-weight: bold;">
+          Chat with me on WhatsApp
+        </a>
+      </p>
+    </div>
+
   </div>
 
 </div>
+
+<style>
+  /* Mobile responsive styles */
+  @media screen and (max-width: 768px) {
+    #contact-section {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info div {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+    }
+
+    .contact-info span {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* PC (Desktop) styles */
+  @media screen and (min-width: 769px) {
+    #contact-section {
+      padding: 50px 40px;
+    }
+
+    .contact-info div {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+</style>

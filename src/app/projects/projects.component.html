@@ -1,45 +1,96 @@
-<div id="projects-section" style="
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  background: #f9f9f9;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  transition: opacity 1s ease-in-out; 
-">
-
-  <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Projects</h2>
-  <div style="max-width: 800px; text-align: left;">
-    <div style="margin-bottom: 30px;">
-      <h3 style="font-size: 1.5rem; color: #241799;">M-TAP (Mobile Tap) - Working on it</h3>
-      <p style="font-size: 1.2rem;"><strong>GitHub Link:</strong> 
-        <a href="https://github.com/hrishi284/M-TAP" target="_blank" style="color: rgba(14, 97, 179, 0.97); text-decoration: underline;">
-            M-TAP
-        </a>
-      </p>
-      <p><strong>Client-Side:</strong> Flutter</p>
-      <p><strong>Server-Side:</strong> NET Core</p>
-      <p><strong>Database:</strong> Firebase</p>
-      <p><strong>Description:</strong> TM-TAP (Mobile Tap) is a mobile application designed to replace traditional Point of Sale (POS) systems, allowing local shops to streamline payment processing. This app facilitates digital payment solutions and enables stores to send receipts to customers via email or SMS, making transactions more efficient and convenient.</p>
-    </div>
-  </div>
-  <div style="max-width: 800px; text-align: left;">
-    <div style="margin-bottom: 30px;">
-      <h3 style="font-size: 1.5rem; color: #241799;">Online Real Estate Auction System - 2023</h3>
-      <p style="font-size: 1.2rem;"><strong>GitHub Link:</strong> 
-        <a href="https://github.com/hrishi284/Online-Auction-System" target="_blank" style="color: rgba(14, 97, 179, 0.97); text-decoration: underline;">
-           Online Auction System
-        </a>
-      </p>
-      <p><strong>Client-Side:</strong> ReactJS</p>
-      <p><strong>Server-Side:</strong> Java Spring Boot</p>
-      <p><strong>Database:</strong> MySQL</p>
-      <p><strong>Description:</strong> The Online Real Estate Auction Platform is a digital marketplace tailored to streamline the process of buying and selling houses, apartments, and flats. This platform serves as a centralized hub where buyers and sellers in the real estate market can efficiently connect.
-        Online Auction System is a user-friendly website designed to put the auction at the fingertips of potential bidders, expanding the scope of the OPEN AUCTION. This website also serves as a public marketplace where buyers and sellers may meet and trade real estate at reasonable prices with appropriate property validation and inspection. Everyone has access to it at any moment. One user may submit several bids in this system. Buyers who wish to bid on it must pay a deposit; if they win the bid, they will be notified by email after the timer expires.
-    </p>
+<div id="projects-section" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-content">
+      <div class="project-card">
+        <h3>M-TAP (Mobile Tap) - Working on it</h3>
+        <p><strong>GitHub Link:</strong> 
+          <a href="https://github.com/hrishi284/M-TAP" target="_blank">M-TAP</a>
+        </p>
+        <p><strong>Client-Side:</strong> Flutter</p>
+        <p><strong>Server-Side:</strong> .NET Core</p>
+        <p><strong>Database:</strong> Firebase</p>
+        <p><strong>Description:</strong> M-TAP is a mobile application designed to replace traditional POS systems, enabling local shops to streamline payment processing. It facilitates digital payments and allows stores to send receipts via email or SMS, enhancing transaction efficiency.</p>
+      </div>
+      <div class="project-card">
+        <h3>Online Real Estate Auction System - 2023</h3>
+        <p><strong>GitHub Link:</strong> 
+          <a href="https://github.com/hrishi284/Online-Auction-System" target="_blank">Online Auction System</a>
+        </p>
+        <p><strong>Client-Side:</strong> ReactJS</p>
+        <p><strong>Server-Side:</strong> Java Spring Boot</p>
+        <p><strong>Database:</strong> MySQL</p>
+        <p><strong>Description:</strong> This digital marketplace simplifies buying and selling real estate. It provides a user-friendly platform for online property auctions, allowing multiple bids, secure transactions, and real-time notifications.</p>
+      </div>
     </div>
   </div>
   
-</div>
+  <style>
+    .projects-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      background: #f9f9f9;
+      color: black;
+      text-align: center;
+      transition: opacity 1s ease-in-out;
+    }
+  
+    .projects-content {
+      max-width: 800px;
+      text-align: left;
+    }
+  
+    .project-card {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .project-card h3 {
+      font-size: 1.5rem;
+      color: #241799;
+    }
+  
+    .project-card a {
+      color: rgba(14, 97, 179, 0.97);
+      text-decoration: underline;
+    }
+  
+    @media (max-width: 1024px) {
+      .projects-section {
+        padding: 40px 15px;
+      }
+      .projects-content {
+        max-width: 700px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .projects-section {
+        padding: 30px 10px;
+      }
+      .projects-content {
+        max-width: 600px;
+      }
+      .project-card h3 {
+        font-size: 1.3rem;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .projects-section {
+        padding: 20px 5px;
+      }
+      .projects-content {
+        max-width: 100%;
+      }
+      .project-card h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  
